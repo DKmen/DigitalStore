@@ -1,5 +1,5 @@
 import React,{useEffect} from "react";
-import { StyleSheet, FlatList } from "react-native";
+import { StyleSheet, FlatList,Text } from "react-native";
 import { useSelector , useDispatch} from "react-redux";
 
 import ProductOverViewComponent from "../../components/ProductOverView";
@@ -19,9 +19,6 @@ export default function ProductOverView(props) {
 
   const productData = useSelector((state) => state.products.avableProduct);
 
-  if(productData.length==0){
-    return
-  }
   return (
     <FlatList
       data={productData}
